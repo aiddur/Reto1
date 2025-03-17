@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>WaterCrypt</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+    <div class="container">
+        <header>
+            <h1>WaterCrypt: Joint Watermarking and Encryption Scheme for Secure <br/> Privacy-Preserving Data Aggregation in Smart Metering Systems</h1>
+        </header>
+        
+    <main>
+        <section class="smart-meters">
+            <h2><u>Smart meters</u></h2>
+            <p>A <strong>smart meter</strong> is automated equipment installed in smart home for calculating the energy consumption of
+            various commodities such as gas, water, and electricity (<strong>Sun</strong> et <em><abbr title= "and others">al.</abbr></em>). It receives pricing information and
+                load forecasting from the utility company while displaying all the information in the in-home-display (<em><abbr title= "in-home-display">IHD</abbr></em>)
+                (<strong>Asghar</strong> et <em><abbr title= "and others">al.</abbr></em>).</p>
+        </section>
+            
+        <figure class="image-container">
+            <img src="smart.png" alt="A Smart Metering System">
+            <figcaption>Fig. 1: Smart Metering System</figcaption>
+        </figure>
+
+        <section class="system-model">
+            <h2><u>System Model</u></h2>
+            <p>In the proposed scheme, a residential area with multiple smart homes is considered, where multiple <em>SMs</em>
+            are used. The usage data is recorded in the <em>SMs</em> periodically. The entire system consists of four entities:</p>
+            <ol>
+                <li>Smart Meters (<em><abbr title= "Smart Meters">SMs</abbr></em>)</li>
+                <li>Encryption server (<em><abbr title= "Encryption server">ES</abbr></em>)</li>
+                <li>Data Aggregator (<em><abbr title= "Data Aggregator">DA</abbr></em>)</li>
+                <li>Control Center (<em><abbr title= "Control Center">CC</abbr></em>)</li>
+            </ol>
+            <p><em><abbr title= "Smart Meters">SM</abbr></em> is responsible for embedding the watermark in the original data and sending to the 
+            <em><abbr title= "Encryption server">ES</abbr></em>. <em><abbr title= "Encryption server">ES</abbr></em> encrypts
+            the watermarked data and sends it back to <em><abbr title= "Smart Meters">SM</abbr></em>. Before sending the data to <em><abbr title= "Data Aggregator">DA</abbr></em>, <em><abbr title= "Smart Meters">SMs</abbr></em> preprocess it.
+            After receiving data from all the <em><abbr title= "Smart Meters">SMs</abbr></em>, <em><abbr title= "Data Aggregator">DA</abbr></em> aggregates the watermarked encrypted data and sends it to <em><abbr title= "Control Center">CC</abbr></em>
+            eventually. <em><abbr title= "Control Center">CC</abbr></em> decrypts and extracts the total consumption data after verification and stores it for future
+            analysis.</p>
+        </section>
+
+        <section class="threat-model">
+            <h2><u>Threat Model</u></h2>
+            <blockquote>
+                “An attacker can be an internal or external entity”. <strong>Mohammadali and Haghighi</strong>
+            </blockquote>
+            <p>An attacker can try to gain unauthorized access to <em><abbr title= "Smart Meters">SM</abbr></em> data for various dishonest purposes. We denote
+                the attacker as <em>A</em>, where he/she may attempt the following attacks:</p>
+            <ul>
+                <li><strong>Eavesdropping</strong>: A can eavesdrop on the transmission channel between the system entities to access
+                    daily lifestyle and behavior of the user for crime purposes.</li>
+                <li><strong>Man-in-the middle</strong> attack (<em><abbr title= "Man-in-the-middle">MitM</abbr></em>): A can intercept the messages sent between the system entities to
+                    retrieve, discard, or modify the <em><abbr title= "Smart Meters">SM</abbr></em> data.</li>
+                <li><strong>Replay</strong> attack: A can perform replay attacks on the network to resend, replay or delay an <em><abbr title= "Smart Meters">SM</abbr></em>’s report
+                    maliciously.</li>
+            </ul>
+        </section>
+
+        <section class="conclusion">
+            <h2><u>Conclusion and Future Work</u></h2>
+            <p>This paper presents the novel <strong>WaterCrypt</strong> scheme for privacy preserving data aggregation based on
+            reversible watermarking and <strong>Paillier</strong> encryption. A reversible watermarking approach is used to preserve
+            the integrity of the user fine grained data. Considering that can provide well-grounded security to the data
+            in one hand, and the limited computational capability of <em><abbr title= "Smart Meters">SMs</abbr></em> on the other hand, we introduced another
+            entity in the system: encryption server. </p>
+            <p> The <strong>WaterCrypt</strong> protocol provably protects the system from various 
+            attacks such as eavesdropping, replay, man-in-the-middle, impersonation, and masquerading. Physical attacks like false data injection
+            are also taken into consideration. Moreover, the computational time is significantly small. Using reversible
+            watermarking, the <strong>WaterCrypt</strong> protocol performs better than other recent schemes. After analyzing the
+            security and privacy requirements and evaluating performance, it can be concluded that we have
+            successfully implemented a suitable and secure scheme for resource-constrained smart metering
+            systems.</p>
+            <p>For future work, the focus will be on high frequency smart meters where the usage data are generated
+            very frequently. We aim to employ reversible watermarking using difference expansion for this kind of
+            smart metering systems.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>First practical exercise of the <em><abbr title= "Universitat Oberta de Catalunya">UOC </abbr><abbr title= "HyperText Markup Language">HTML</abbr></em> and <em><abbr title= "Cascading Style Sheets">CSS</abbr></em> subject.</p>
+        <p>Extracted from <em>Repositori Institucional (O2)</em> . The complete original can be found at:
+            <span class="link">
+            <a href= "https://link.springer.com/chapter/10.1007/978-981-19-9331-2_47" ><em><strong>WaterCrypt: Joint Watermarking and Encryption Scheme for
+        Secure Privacy-Preserving Data Aggregation in Smart Metering Systems.</strong></em></a>.
+            </span>
+        </p>
+        <h4>Kabir, F. , Megías, D. and Koohpayeh Araghi, T.</h4>
+    </footer>
+    </div>
+    </body>
+</html>
